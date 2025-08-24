@@ -13,6 +13,6 @@ function MovieCard(props)
 
 MovieCard.PropType = {
     title : PropTypes.string,
-    rating : PropTypes.number,
+    rating : PropTypes.string,
 }   
 export default MovieCard;

@@ -11,31 +11,31 @@ function MovieList(){
             id : 1,
             image : Must,
             title : "Iron Musk",
-            rating : 5.4 / 5.5,
+            rating : "5.4/5.5",
         },
         {
              id : 2,
              image : Hacking,
             title : "Ethical World",
-            rating : 5.5 / 5.5,
+            rating : "5.5/5.5",
         },
         {
              id : 3,
              image : Pursuite,
             title : "pursuit of happyness",
-            rating : 5.0/5.5,
+            rating : "5.0/5.5",
         },
         {
              id : 4,
              image : IronMan,
             title : "Iron Man",
-            rating : 5.5/5.5,
+            rating : "5.5/5.5",
         },
         {
              id : 5,
              image : IronMan2,
             title : "Iron Man 2",
-            rating : 5.5/5.5,
+            rating : "5.5/5.5",
         }
 
     ]
