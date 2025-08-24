@@ -9,11 +9,12 @@
   padding: 2px;
   text-align: center;
   display: inline-block;
+  margin-left: 60px;
 }
 
 .movie img 
 {
   width: 200px;
-  height: 1000pxpx;
+  height: 200px;
   margin: 2px;
 }
