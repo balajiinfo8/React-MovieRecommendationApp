@@ -4,6 +4,7 @@ import MovieCard from './MovieCard';
 import IronMan from './assets/IronMan.jpg';
 import IronMan2 from './assets/Iron Man.jpg'
 import Pursuite from './assets/Pursuit.jpg';
+import 'typeface-roboto';
 function MovieList(){
 
     const movies = [
@@ -44,6 +45,10 @@ function MovieList(){
 
     return (
        <div>
+
+        <h1 style={{textAlign: 'center' , fontFamily : 'sans-serif'}}>
+            Netflix Clone
+            </h1>
             {movies.map(movie =>(
              <MovieCard
                 key={movie.id}  
