@@ -17,7 +17,7 @@ function MovieList(){
              id : 2,
              image : Hacking,
             title : "Ethical World",
-            rating : 4,
+            rating : 4.5,
         },
         {
              id : 3,
@@ -31,7 +31,7 @@ function MovieList(){
             title : "Iron Man",
             rating : 5,
         },
-         {
+        {
              id : 5,
              image : IronMan2,
             title : "Iron Man 2",
