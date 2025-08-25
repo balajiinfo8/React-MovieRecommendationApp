@@ -1,21 +1,27 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 function MovieCard(props)
-{
+{   
+    const [purchased,setPurchased] = useState(false);
+    const [discount , setDiscount] = useState(props.price);
 
-    function  applayDiscount(discount,e)
+    function  applayDiscount(amt)
     {
         console.log(props.title,"purchased with",discount,"% price discount");
-        console.log(e);
+        setPurchased(true);
+        setDiscount(discount - amt);
+        console.log(purchased);
     }
     return(
         <div className='movie'>
             <img src={props.image} alt={props.name} />
             <h3>{props.title}</h3>
-            <h2>{props.price}</h2>
+            <h2>{discount}</h2>
             <h1>{props.payment}</h1>
             <span>{props.rating}</span><br />
-            <button onClick={(event) => applayDiscount(20,event)}>Buy Now</button>
+            <button onClick={(event) => applayDiscount(21,event)}>Discount</button>
+            <p>{purchased ? "Already Purchased" : "Buy with % "}</p>
         </div>
     );
 }
