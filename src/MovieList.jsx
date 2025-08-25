@@ -5,9 +5,10 @@ import IronMan from './assets/IronMan.jpg';
 import IronMan2 from './assets/Iron Man.jpg'
 import Pursuite from './assets/Pursuit.jpg';
 import 'typeface-roboto';
+import { useState } from 'react';
 function MovieList(){
 
-    const movies = [
+    const [movies , setMovies] = useState([
         {
             id : 1,
             image : Must,
@@ -49,9 +50,15 @@ function MovieList(){
             rating : "5.5⭐/5.5⭐",
         }
 
-    ]
+    ]);
+
 // sort 
-    movies.sort((x,y) => x.price - y.price)
+    // movies.sort((x,y) => x.price - y.price)
+
+    function handleDelete(id) {
+        const newMovie = movies.filter((movies) => movies.id != id);
+        setMovies(newMovie);
+    }
 
     return (
        <div>
@@ -66,7 +73,9 @@ function MovieList(){
                 price={movie.price} 
                 payment={movie.payment}
                 rating={movie.rating}
-                image={movie.image}  
+                image={movie.image}
+                delete={handleDelete}
+                id={movie.id}  
              />
             ))}
        </div>
