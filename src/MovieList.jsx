@@ -1,72 +1,42 @@
-import Must from './assets/Musk.jpg';
-import Hacking from './assets/Hacking.jpg';
 import MovieCard from './MovieCard';
-import IronMan from './assets/IronMan.jpg';
-import IronMan2 from './assets/Iron Man.jpg'
-import Pursuite from './assets/Pursuit.jpg';
 import 'typeface-roboto';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 function MovieList(){
 
-    const [movies , setMovies] = useState([
-        {
-            id : 1,
-            image : Must,
-            title : "Iron Musk",
-            price : 400,
-            payment : "$ or ₹",
-            rating : "5.4⭐/5.5⭐",
-        },
-        {
-             id : 2,
-             image : Hacking,
-            title : "Ethical World",
-            price : 300,
-            payment : "$ or ₹",
-            rating : "5.5⭐/5.5⭐",
-        },
-        {
-             id : 3,
-             image : Pursuite,
-            title : "pursuit of happyness",
-            price : 400,
-            payment : "$ or ₹",
-            rating : "5.0⭐/5.5⭐",
-        },
-        {
-             id : 4,
-             image : IronMan,
-            title : "Iron Man",
-            price : 400,
-            payment : "$ or ₹",
-            rating : "5.5⭐/5.5⭐",
-        },
-        {
-             id : 5,
-             image : IronMan2,
-            title : "Iron Man 2",
-            price : 500,
-            payment : "$ or ₹",
-            rating : "5.5⭐/5.5⭐",
-        }
-
-    ]);
-
+    const [movies , setMovies] = useState(null);
+    
 // sort 
     // movies.sort((x,y) => x.price - y.price)
+
+
+    useEffect(() => {
+        console.log("Use Effecct Called");
+        console.log(movies);
+
+        // get the response 
+        fetch("http://localhost:3000/movies")
+        // return the response 
+        .then(response => {
+            console.log(response);
+            return response.json();
+        }).then(data => setMovies(data));
+    },[])
+
 
     function handleDelete(id) {
         const newMovie = movies.filter((movies) => movies.id != id);
         setMovies(newMovie);
     }
 
-    return (
-       <div>
 
-        <h1 style={{textAlign: 'center' , fontFamily : 'sans-serif'}}>
-            Netflix Clone
-            </h1>
-            {movies.map(movie =>(
+    if(!movies){
+        return <></>
+    }
+
+
+
+    const movieList = movies.map(
+        movie =>(
              <MovieCard
                 key={movie.id}  
                 title={movie.title}
@@ -77,9 +47,15 @@ function MovieList(){
                 delete={handleDelete}
                 id={movie.id}  
              />
-            ))}
-       </div>
-    );
+            ))
+
+    return (
+       <>
+        
+        <h1 style={{textAlign: 'center' , fontFamily : 'sans-serif'}}>Netflix Clone</h1>
+         {movieList}
+       </>
+    );  
 }
 
 export default MovieList;
