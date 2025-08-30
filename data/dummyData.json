@@ -1,15 +1,15 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "1",
       "image": "http://localhost:3000/assets/Musk.jpg",
-      "title": "Iron Musk",
+      "title": "Elon Musk",
       "price": 400,
       "payment": "$ or ₹",
       "rating": "5.4⭐/5.5⭐"
     },
     {
-      "id": 2,
+      "id": "2",
       "image": "http://localhost:3000/assets/Hacking.jpg",
       "title": "Ethical World",
       "price": 300,
@@ -17,7 +17,7 @@
       "rating": "5.5⭐/5.5⭐"
     },
     {
-      "id": 3,
+      "id": "3",
       "image": "http://localhost:3000/assets/Pursuit.jpg",
       "title": "pursuit of happyness",
       "price": 400,
@@ -25,7 +25,7 @@
       "rating": "5.0⭐/5.5⭐"
     },
     {
-      "id": 4,
+      "id": "4",
       "image": "http://localhost:3000/assets/IronMan.jpg",
       "title": "Iron Man",
       "price": 400,
@@ -33,7 +33,7 @@
       "rating": "5.5⭐/5.5⭐"
     },
     {
-      "id": 5,
+      "id": "5",
       "image": "http://localhost:3000/assets/Iron Man.jpg",
       "title": "Iron Man 2",
       "price": 500,
@@ -41,7 +41,7 @@
       "rating": "5.5⭐/5.5⭐"
     },
     {
-      "id": 8,
+      "id": "8",
       "image": "http://localhost:3000/assets/whoami.jpg",
       "title": "WhoAmI",
       "price": 10000,

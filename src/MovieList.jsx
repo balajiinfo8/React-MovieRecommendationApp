@@ -3,72 +3,35 @@ import 'typeface-roboto';
 import { useEffect, useState } from 'react';
 function MovieList(){
 
-    const [movies , setMovies] = useState([
-    {
-        "id": "1",
-        "image": "http://localhost:3000/assets/Musk.jpg",
-        "title": "Iron Musk",
-        "price": 400,
-        "payment": "$ or ₹",
-        "rating": "5.4⭐/5.5⭐"
-    },
-    {
-        "id": "2",
-        "image": "http://localhost:3000/assets/Hacking.jpg",
-        "title": "Ethical World",
-        "price": 300,
-        "payment": "$ or ₹",
-        "rating": "5.5⭐/5.5⭐"
-    },
-    {
-        "id": "3",
-        "image": "http://localhost:3000/assets/Pursuit.jpg",
-        "title": "pursuit of happyness",
-        "price": 400,
-        "payment": "$ or ₹",
-        "rating": "5.0⭐/5.5⭐"
-    },
-    {
-        "id": "4",
-        "image": "http://localhost:3000/assets/IronMan.jpg",
-        "title": "Iron Man",
-        "price": 400,
-        "payment": "$ or ₹",
-        "rating": "5.5⭐/5.5⭐"
-    },
-    {
-        "id": "5",
-        "image": "http://localhost:3000/assets/Iron Man.jpg",
-        "title": "Iron Man 2",
-        "price": 500,
-        "payment": "$ or ₹",
-        "rating": "5.5⭐/5.5⭐"
-    },
-    {
-        "id": "8",
-        "image": "http://localhost:3000/assets/whoami.jpg",
-        "title": "WhoAmI",
-        "price": 10000,
-        "payment": "$ or ₹",
-        "rating": "5.5⭐/5.5⭐"
-    }
-]);
+    const [movies , setMovies] = useState(null);
     
 // sort 
     // movies.sort((x,y) => x.price - y.price)
 
+    const [error,setError] = useState(null);
 
     useEffect(() => {
         console.log("Use Effecct Called");
         console.log(movies);
 
+
+        // set time out in the fetch
+        setTimeout(()=>{
         // get the response 
-        fetch("https://jsonplaceholder.typicode.com/posts")
+        fetch("http://localhost:3000/movies")
         // return the response 
         .then(response => {
+            if(!response.ok) {
+                throw Error("Coudn't able to throw erros");
+            }
             console.log(response);
             return response.json();
-        }).then(data => setMovies(data));
+        })
+        .then(data => setMovies(data))
+        .catch((error)=>{
+            console.log(error.message);
+            setError(error.message);
+        })},1000)
     },[])
 
 
@@ -79,7 +42,12 @@ function MovieList(){
 
 
     if(!movies){
-        return <></>
+        return (
+            <>
+            {!error && <img src="data/assets/loading.gif"></img>}
+            {error && <p>{error}</p>}
+            </>
+        )
     }
 
 
