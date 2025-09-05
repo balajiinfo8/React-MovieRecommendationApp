@@ -32,7 +32,7 @@ function MovieList() {
   if (!movies) {
     return (
       <>
-        {!error && <img src="data/assets/loading.gif" alt="loading" />}
+        {!error && <center><img src="data/assets/loading.gif" alt="loading" /></center>}
         {error && <p>{error}</p>}
       </>
     );
