@@ -29,14 +29,26 @@ function MovieList() {
     setMovies(newMovie);
   }
 
-  if (!movies) {
-    return (
-      <>
-        {!error && <center><img src="data/assets/loading.gif" alt="loading" /></center>}
-        {error && <p>{error}</p>}
-      </>
-    );
-  }
+ if (!movies) {
+  return (
+    <>
+      {!error && (
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh', // full viewport height
+          }}
+        >
+          <img src="data/assets/loading.gif" alt="loading" />
+        </div>
+      )}
+      {error && <p>{error}</p>}
+    </>
+  );
+}
+
 
   const movieList = movies.map(movie => (
     <MovieCard
