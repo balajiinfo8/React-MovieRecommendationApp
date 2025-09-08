@@ -20,9 +20,9 @@ function MovieCard(props)
             <h2>{discount}</h2>
             <h1>{props.payment}</h1>
             <span>{props.rating}</span><br />
-            <button onClick={(event) => applayDiscount(21,event)}>Discount</button>
-            <button onClick={() =>  props.delete(props.id)}>Delete</button>
-            <p>{purchased ? "Already Purchased" : "Buy with % "}</p>
+            <button onClick={(event) => applayDiscount(21,event)} style={{display: "flex",padding:"5px 5px",borderRadius:"5px",backgroundColor:"darksalmon"}}>Discount</button>
+            <button onClick={() =>  props.delete(props.id)}  style={{position:"relative",left:"90px",bottom:"30px",padding:"5px 10px",borderRadius:"5px",backgroundColor:"darksalmon"}}>Delete</button>
+            <p>{purchased ? "Already Purchased" : <u>"Buy with % "</u>}</p>
         </div>
     );
 }

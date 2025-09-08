@@ -137,7 +137,7 @@ function MovieList() {
           >
             <img
               src="https://media1.tenor.com/m/1No9rO6uaZsAAAAC/xm-loader-xcelerate-media.gif"
-              alt="loading"
+              alt="loading" style={{width:"50px",height:"50px"}}
             />
           </div>
         )}
