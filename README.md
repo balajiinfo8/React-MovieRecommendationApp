@@ -56,8 +56,7 @@
 
 ## 🚀 Projects Showcase
 - [📝 Todo List App](https://github.com/balajiinfo8/todo-list) – CRUD app with HTML, CSS, JavaScript  
-- [🌐 Django Blog](https://github.com/balajiinfo8/blog-app) – Full-stack blog using Django  
-- [💻 Portfolio Website](https://github.com/balajiinfo8/portfolio-site) – Personal portfolio with HTML, CSS, JS  
+- [💻 Portfolio Website](https://balajiinfo8.github.io/portfolio/) – Personal portfolio with HTML, CSS, JS  
 - [🔐 TryHackMe Notes](https://github.com/balajiinfo8/ctf-notes) – CTF practice and write-ups  
 
 ---
