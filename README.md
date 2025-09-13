@@ -1,13 +1,67 @@
-https://balajiinfo8.github.io/React-MovieRecommendationApp/
-# React + Vite
+<h1 align="center">Hey 👋, I'm Balaji</h1>
+<h3 align="center">Full Stack Developer | Django Backend & Frontend Enthusiast</h3>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+###
 
-Currently, two official plugins are available:
+<div align="center">
+  <!-- Frontend -->
+  <img src="https://skillicons.dev/icons?i=html,css,js,react" height="60" alt="frontend skills" />
+  <img width="12" />
+  <!-- Backend -->
+  <img src="https://skillicons.dev/icons?i=python,django,mysql" height="60" alt="backend skills" />
+  <img width="12" />
+  <!-- Tools -->
+  <img src="https://skillicons.dev/icons?i=git,linux" height="60" alt="tools" />
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+###
 
-## Expanding the ESLint configuration
+<div align="center">
+  <a href="mailto:vinothkumarbalaji150@gmail.com">
+    <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=D14836&logoColor=white&style=for-the-badge" height="25" />
+  </a>
+  <a href="https://www.linkedin.com/in/vjbalaji-00283a18a/">
+    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=for-the-badge" height="25" />
+  </a>
+</div>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💫 About Me
+- 🔭 Experienced in **Django Backend Development** with real-world project work  
+- 🌱 Expanding my skills in **React & Advanced JavaScript** to grow as a Full Stack Developer  
+- 💡 Passionate about **Web Security, REST APIs, and Scalable System Design**  
+- ⚡ Fun fact: Debugging feels like solving puzzles — it makes coding exciting 😅  
+
+---
+
+## 📊 GitHub Stats
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=balajiinfo8&theme=dracula&hide_border=false&include_all_commits=true&count_private=true" height="150" />
+  <img src="https://streak-stats.demolab.com?user=balajiinfo8&theme=dracula&hide_border=false&border_radius=5" height="150" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=balajiinfo8&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact" height="150" />
+</div>
+
+---
+
+## 🏆 Achievements
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=balajiinfo8&theme=dracula&column=3&margin-w=15&margin-h=15" height="150" />
+</div>
+
+---
+
+## 🚀 Projects Showcase
+- [📝 Todo List App](https://github.com/balajiinfo8/todo-list) – CRUD app with HTML, CSS, JavaScript  
+- [🌐 Django Blog](https://github.com/balajiinfo8/blog-app) – Full-stack blog using Django  
+- [💻 Portfolio Website](https://github.com/balajiinfo8/portfolio-site) – Personal portfolio with HTML, CSS, JS  
+- [🔐 TryHackMe Notes](https://github.com/balajiinfo8/ctf-notes) – CTF practice and write-ups  
+
+---
+
+<p align="center">
+  <img src="https://visitcount.itsvg.in/api?id=balajiinfo8&icon=0&color=0" />
+</p>
