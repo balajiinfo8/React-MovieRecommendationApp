@@ -73,7 +73,7 @@
 
 // export default MovieList;
 
-import MovieCard from './MovieCard';
+import MovieCard from './MovieCard';  
 import 'typeface-roboto';
 import { useEffect, useState } from 'react';
 
