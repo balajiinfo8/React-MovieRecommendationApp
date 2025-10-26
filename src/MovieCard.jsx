@@ -1,37 +1,28 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
 
-function MovieCard(props)
-{   
-    const [purchased,setPurchased] = useState(false);
-    const [discount , setDiscount] = useState(props.price);
-
-    function  applayDiscount(price)
-    {
-        console.log(props.title,"purchased with",discount,"% price discount");
-        setPurchased(true);
-        setDiscount(discount - price);
-        console.log(purchased);
-    }
-    return(
-        <div className='movie'>
-            <img src={props.image} alt={props.name} />
-            <h3>{props.title}</h3>
-            <h2>{discount}</h2>
-            <h1>{props.payment}</h1>
-            <span>{props.rating}</span><br />
-            <button onClick={(event) => applayDiscount(21,event)} style={{display: "flex",padding:"5px 5px",borderRadius:"5px",backgroundColor:"darksalmon"}}>Discount</button>
-            <button onClick={() =>  props.delete(props.id)}  style={{position:"relative",left:"90px",bottom:"30px",padding:"5px 10px",borderRadius:"5px",backgroundColor:"darksalmon"}}>Delete</button>
-            <p>{purchased ? "Already Purchased" : <u>"Buy with % "</u>}</p>
-        </div>
-    );
+function MovieCard({ id, image, title, price, payment, rating, onDelete, onEdit }) {
+  return (
+    <div className='movie'>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <h2>{price}</h2>
+      <h1>{payment}</h1>
+      <span>{rating}</span><br />
+      <button onClick={onEdit} style={{ marginRight: 8 }}>Edit</button>
+      <button onClick={() => onDelete(id)}>Delete</button>
+    </div>
+  );
 }
 
-MovieCard.PropType = {
-    image : PropTypes.image,
-    title : PropTypes.string,
-    price : PropTypes.number,
-    payment : PropTypes.string,
-    rating : PropTypes.string,
-}   
+MovieCard.propTypes = {
+  id: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  payment: PropTypes.string.isRequired,
+  rating: PropTypes.string,
+  onDelete: PropTypes.func.isRequired,
+  onEdit: PropTypes.func.isRequired
+};
+
 export default MovieCard;
