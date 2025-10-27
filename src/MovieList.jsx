@@ -136,7 +136,7 @@ function MovieList() {
   ));
 
   return (
-    <>Net
+    <>
       <h1 style={{ textAlign: 'center', fontFamily: 'sans-serif' }}>FlixTrack</h1>
 
       {/* Create / Update form */}
