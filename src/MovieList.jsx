@@ -136,8 +136,8 @@ function MovieList() {
   ));
 
   return (
-    <>
-      <h1 style={{ textAlign: 'center', fontFamily: 'sans-serif' }}>Netflix Clone</h1>
+    <>Net
+      <h1 style={{ textAlign: 'center', fontFamily: 'sans-serif' }}>FlixTrack</h1>
 
       {/* Create / Update form */}
       <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 8, maxWidth: 420, margin: '0 auto 20px' }}>
