@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
 function MovieCard({ id, image, title, price,platform, rating, onDelete, onEdit }) {
   return (
-    <div className='movie'>
+    <div className='movie' > 
       <img src={image} alt={title} />
       <h3>Title : {title}</h3>
       <h2>Price : {price}</h2>

@@ -154,7 +154,7 @@ function MovieList() {
 
   return (
     <>
-      <h1 style={{ textAlign: 'center', fontFamily: 'sans-serif' }}>FlixTrack</h1>
+      <h1 style={{ textAlign: 'center', fontFamily: 'Arial, Helvetica, sans-serif' , color : 'GrayText' }}>FlixTrack</h1>
 
       {/* Create / Update form */}
       <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 8, maxWidth: 420, margin: '0 auto 20px' }}>
