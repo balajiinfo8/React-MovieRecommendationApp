@@ -1,4 +1,4 @@
-<a href="https://balajiinfo8.github.io/React-MovieRecommendationApp/">link : https://balajiinfo8.github.io/React-MovieRecommendationApp/</a>
+<a href="https://balajiinfo8.github.io/React-MovieRecommendationApp/" target="_blank">link : https://balajiinfo8.github.io/React-MovieRecommendationApp/</a>
 <h1 align="center">Hey 👋, I'm Balaji</h1>
 <h3 align="center">Full Stack Developer | Django Backend & Frontend Enthusiast</h3>
 
