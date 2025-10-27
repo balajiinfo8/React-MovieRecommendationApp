@@ -2,7 +2,7 @@ import MovieCard from './MovieCard';
 import 'typeface-roboto';
 import { useEffect, useState } from 'react';
 
-const initialForm = { title: '', price: '', payment: '', rating: '', image: '' };
+const initialForm = { title: '', price: '', platform: '', rating: '', image: '' };
 
 function MovieList() {
   const [movies, setMovies] = useState(null);
@@ -11,21 +11,16 @@ function MovieList() {
   const [search, setSearch] = useState('');
   const [form, setForm] = useState(initialForm);
   const [editingId, setEditingId] = useState(null);
+  const BASE_URL = "https://68feeb02e02b16d1753bce41.mockapi.io/flextack/movies/movies";
 
-  // Fetch initial data once
+  // Fetch initial data once (READ)
   useEffect(() => {
-    fetch("https://api.jsonsilo.com/public/31707bac-e12c-420d-99f5-3c6f57d6a25f")
-      .then(response => {
-        if (!response.ok) throw new Error("Couldn't fetch data");
-        return response.json();
-      })
+    fetch(BASE_URL)
+      .then(response => response.json())
       .then(data => {
-        if (Array.isArray(data.movies)) {
-          setMovies(data.movies);
-          setFilteredMovies(data.movies);
-        } else {
-          throw new Error("Invalid Data Format");
-        }
+        console.log("FETCHED DATA:", data);
+        setMovies(data);
+        setFilteredMovies(data);
       })
       .catch(err => setError(err.message));
   }, []);
@@ -36,11 +31,17 @@ function MovieList() {
     return list.filter(m => (m.title || '').toLowerCase().includes(query.toLowerCase()));
   }
 
-  // Delete
+  // Delete (DELETE)
   function handleDelete(id) {
-    const updated = (movies || []).filter(m => m.id !== id);
-    setMovies(updated);
-    setFilteredMovies(applyFilter(updated, search));
+    fetch(`${BASE_URL}/${id}`, {
+      method: "DELETE",
+    })
+    .then(() => {
+      const updated = (movies || []).filter(m => m.id !== id);
+      setMovies(updated);
+      setFilteredMovies(applyFilter(updated, search));
+    })
+    .catch(err => console.error("Delete error:", err));
   }
 
   // Search
@@ -56,33 +57,49 @@ function MovieList() {
     setForm(f => ({ ...f, [name]: name === 'price' ? value.replace(/[^\d.]/g, '') : value }));
   }
 
-  // Create/Update submit
+  // Create/Update submit (CREATE & UPDATE)
   function handleSubmit(e) {
     e.preventDefault();
 
     const payload = {
       title: form.title.trim() || 'Untitled',
       price: Number(form.price) || 0,
-      payment: form.payment.trim() || 'UPI',
+      platform: form.platform.trim() || 'Theatre',
       rating: form.rating.trim(),
       image: form.image.trim(),
     };
 
     if (editingId) {
-      // Update immutably with map
-      const updated = (movies || []).map(m => (m.id === editingId ? { ...m, ...payload } : m));
-      setMovies(updated);
-      setFilteredMovies(applyFilter(updated, search));
-      setEditingId(null);
+      // UPDATE existing movie
+      fetch(`${BASE_URL}/${editingId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+      .then(res => res.json())
+      .then(updatedMovie => {
+        const updated = (movies || []).map(m =>
+          m.id === editingId ? updatedMovie : m
+        );
+        setMovies(updated);
+        setFilteredMovies(applyFilter(updated, search));
+        setEditingId(null);
+      })
+      .catch(err => console.error("Update error:", err));
     } else {
-      // Create new record
-      const newMovie = {
-        id: (typeof crypto !== 'undefined' && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()),
-        ...payload,
-      };
-      const updated = [newMovie, ...(movies || [])];
-      setMovies(updated);
-      setFilteredMovies(applyFilter(updated, search));
+      // CREATE new movie
+      fetch(BASE_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      })
+      .then(res => res.json())
+      .then(newMovie => {
+        const updated = [newMovie, ...(movies || [])];
+        setMovies(updated);
+        setFilteredMovies(applyFilter(updated, search));
+      })
+      .catch(err => console.error("Create error:", err));
     }
 
     setForm(initialForm);
@@ -94,7 +111,7 @@ function MovieList() {
     setForm({
       title: movie.title ?? '',
       price: String(movie.price ?? ''),
-      payment: movie.payment ?? '',
+      platform: movie.platform ?? '',
       rating: movie.rating ?? '',
       image: movie.image ?? '',
     });
@@ -112,11 +129,11 @@ function MovieList() {
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
             <img
               src="https://media1.tenor.com/m/1No9rO6uaZsAAAAC/xm-loader-xcelerate-media.gif"
-              alt="loading" style={{ width: "50px", height: "50px" }}
+              alt="loading" style={{ width: "50px", height: "50px" }} 
             />
           </div>
         )}
-        {error && <p>{error}</p>}
+        {error && <p style={{ textAlign: 'center', color: 'red' }}>{error}</p>}
       </>
     );
   }
@@ -128,7 +145,7 @@ function MovieList() {
       image={movie.image}
       title={movie.title}
       price={movie.price}
-      payment={movie.payment}
+      platform={movie.platform}
       rating={movie.rating}
       onDelete={handleDelete}
       onEdit={() => onEdit(movie)}
@@ -143,12 +160,24 @@ function MovieList() {
       <form onSubmit={handleSubmit} style={{ display: 'grid', gap: 8, maxWidth: 420, margin: '0 auto 20px' }}>
         <input name="title" value={form.title} onChange={handleFormChange} placeholder="Title" required />
         <input name="price" type="number" value={form.price} onChange={handleFormChange} placeholder="Price" min="0" step="0.01" />
-        <input name="payment" value={form.payment} onChange={handleFormChange} placeholder="Payment (e.g., UPI)" />
+        
+        {/* Platform dropdown */}
+        <select name="platform" value={form.platform} onChange={handleFormChange} required>
+          <option value="">Select Platform</option>
+          <option value="Theatre">Theatre</option>
+          <option value="Netflix">Netflix</option>
+          <option value="Prime Video">Prime Video</option>
+          <option value="Disney+ Hotstar">Disney+ Hotstar</option>
+          <option value="JioCinema">JioCinema</option>
+          <option value="YouTube">YouTube</option>
+          <option value="telegram">Telegram</option>
+        </select>
+
         <input name="rating" value={form.rating} onChange={handleFormChange} placeholder="Rating" />
         <input name="image" value={form.image} onChange={handleFormChange} placeholder="Image URL" />
         <div>
-          <button type="submit" style={{ marginRight: 8 }}>{editingId ? 'Update' : 'Create'}</button>
-          {editingId && <button type="button" onClick={onCancelEdit}>Cancel</button>}
+          <button type="submit" style={{ marginRight: 8 , backgroundColor : "#3333cc" , border : "None" , color : "white" , textAlign : "center"}}>{editingId ? 'Update' : 'Create'}</button>
+          {editingId && <button type="button" onClick={onCancelEdit} style={{ marginRight: 8 , backgroundColor : "#ff0000" , border : "None" , color : "white" , textAlign : "center"}}>Cancel</button>}
         </div>
       </form>
 
