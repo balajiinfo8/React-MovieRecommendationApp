@@ -167,7 +167,7 @@ function MovieList() {
           <option value="Theatre">Theatre</option>
           <option value="Netflix">Netflix</option>
           <option value="Prime Video">Prime Video</option>
-          <option value="Disney+ Hotstar">Disney+ Hotstar</option>
+          <option value="JioHotstar">JioHotstar</option>
           <option value="JioCinema">JioCinema</option>
           <option value="YouTube">YouTube</option>
           <option value="telegram">Telegram</option>
