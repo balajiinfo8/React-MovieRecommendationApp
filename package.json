@@ -1,0 +1,49 @@
+{
+  "homepage": "https://balajiinfo8.github.io/React-MovieRecommendationApp",
+  "name": "movierecommendationapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.11.0",
+    "bootstrap": "^5.3.8",
+    "prop-types": "^15.8.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typeface-roboto": "^1.1.13"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.3.0",
+    "sass": "^1.93.2",
+    "vite": "^7.1.12"
+  },
+  "description": "<a href=\"https://balajiinfo8.github.io/React-MovieRecommendationApp/\">link : https://balajiinfo8.github.io/React-MovieRecommendationApp/</a> <h1 align=\"center\">Hey 👋, I'm Balaji</h1> <h3 align=\"center\">Full Stack Developer | Django Backend & Frontend Enthusiast</h3>",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balajiinfo8/React-MovieRecommendationApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/balajiinfo8/React-MovieRecommendationApp/issues"
+  }
+}
