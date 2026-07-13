@@ -1,66 +1,270 @@
-<h1 align="center">Hey 👋, I'm Balaji</h1>
-<h3 align="center">Full Stack Developer | Django Backend & Frontend Enthusiast</h3>
+<h1 align="center">Hi 👋, I'm Balaji Vinothkumar</h1>
 
-###
+<h3 align="center">
+Python Backend Developer | Django | Django REST Framework | FastAPI | REST APIs | Learning React
+</h3>
 
-<div align="center">
-  <!-- Frontend -->
-  <img src="https://skillicons.dev/icons?i=html,css,js,react" height="60" alt="frontend skills" />
-  <img width="12" />
-  <!-- Backend -->
-  <img src="https://skillicons.dev/icons?i=python,django,mysql" height="60" alt="backend skills" />
-  <img width="12" />
-  <!-- Tools -->
-  <img src="https://skillicons.dev/icons?i=git,linux" height="60" alt="tools" />
-</div>
-
-###
-
-<div align="center">
-  <a href="mailto:vinothkumarbalaji150@gmail.com">
-    <img src="https://img.shields.io/static/v1?message=Email&logo=gmail&label=&color=D14836&logoColor=white&style=for-the-badge" height="25" />
-  </a>
-  <a href="https://www.linkedin.com/in/vjbalaji-00283a18a/">
-    <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&style=for-the-badge" height="25" />
-  </a>
-</div>
+<p align="center">
+I have <b>1.5 years of professional experience</b> building backend applications using Python and Django. I enjoy designing REST APIs, solving backend challenges, integrating AI services, and continuously learning modern web technologies.
+</p>
 
 ---
 
-## 💫 About Me
-- 🔭 Experienced in **Django Backend Development** with real-world project work  
-- 🌱 Expanding my skills in **React & Advanced JavaScript** to grow as a Full Stack Developer  
-- 💡 Passionate about **Web Security, REST APIs, and Scalable System Design**  
-- ⚡ Fun fact: Debugging feels like solving puzzles — it makes coding exciting 😅  
+## 🌐 Connect with Me
+
+<p align="left">
+<a href="mailto:balajivinothkumar.dev@gmail.com">
+<img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+<a href="https://www.linkedin.com/in/balaji-vinothkumar">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+</a>
+
+<a href="https://github.com/balajiinfo8">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
+
+<a href="https://balajiinfo8.github.io/portfolio/">
+<img src="https://img.shields.io/badge/Portfolio-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white"/>
+</a>
+</p>
 
 ---
 
-## 📊 GitHub Stats
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=balajiinfo8&theme=dracula&hide_border=false&include_all_commits=true&count_private=true" height="150" />
-  <img src="https://streak-stats.demolab.com?user=balajiinfo8&theme=dracula&hide_border=false&border_radius=5" height="150" />
-</div>
+# 👨‍💻 About Me
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=balajiinfo8&theme=dracula&hide_border=false&include_all_commits=true&count_private=true&layout=compact" height="150" />
-</div>
+- 💼 Python Backend Developer with **1.5 years of professional experience**
+- 🔭 Experienced in **Python, Django, Django REST Framework, FastAPI**
+- 🌱 Currently learning **React.js** by building production-style full-stack applications
+- ⚡ Passionate about REST APIs, Backend Development, AI Integrations and Scalable Systems
+- 🛠️ Strong interest in writing clean, maintainable and reusable code
 
 ---
 
-## 🏆 Achievements
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=balajiinfo8&theme=dracula&column=3&margin-w=15&margin-h=15" height="150" />
-</div>
+# 🚀 Tech Stack
+
+## 💻 Languages
+
+<p>
+<img src="https://skillicons.dev/icons?i=python,js,html,css"/>
+</p>
 
 ---
 
-## 🚀 Projects Showcase
-- [📝 Todo List App](https://github.com/balajiinfo8/todo-list) – CRUD app with HTML, CSS, JavaScript  
-- [💻 Portfolio Website](https://balajiinfo8.github.io/portfolio/) – Personal portfolio with HTML, CSS, JS  
-- [🔐 TryHackMe Notes](https://github.com/balajiinfo8/ctf-notes) – CTF practice and write-ups  
+## ⚙️ Backend
+
+<p>
+<img src="https://skillicons.dev/icons?i=django,fastapi"/>
+</p>
+
+- Django REST Framework
+- REST APIs
+- JWT Authentication
+- WebSockets
+
+---
+
+## 🗄️ Database
+
+<p>
+<img src="https://skillicons.dev/icons?i=mysql,postgresql,sqlite"/>
+</p>
+
+---
+
+## 🎨 Frontend
+
+<p>
+<img src="https://skillicons.dev/icons?i=react,bootstrap"/>
+</p>
+
+- React.js
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+
+---
+
+## 🔧 Tools
+
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,linux,vscode,postman"/>
+</p>
+
+---
+
+# 🤖 AI Integrations
+
+- Google Gemini
+- Together AI
+- Azure Speech Services
+- Deepgram
+- Whisper
+
+---
+
+# 🚀 Featured Projects
+
+## 📌 Real-Time Project Management System
+
+**Tech Stack**
+
+React.js • Django REST Framework • PostgreSQL • JWT Authentication
+
+**Features**
+
+- User Authentication
+- Project CRUD
+- Task CRUD
+- Responsive Dashboard
+- REST APIs
+
+GitHub:
+https://github.com/balajiinfo8
+
+---
+
+## 🎤 AI Multilingual Voice Translator
+
+**Tech Stack**
+
+FastAPI • WebSockets • Azure Speech • Deepgram
+
+**Features**
+
+- Live Speech Translation
+- Real-Time Communication
+- AI Speech Processing
+
+GitHub:
+https://github.com/balajiinfo8/FastAPI-Live-Translator
+
+---
+
+## 🤖 AskAI Django Assistant
+
+**Tech Stack**
+
+Django • REST APIs • AI Integration
+
+**Features**
+
+- AI Chat Assistant
+- Prompt Processing
+- REST API Integration
+
+GitHub:
+https://github.com/balajiinfo8/AskAI-Django-Assistant
+
+Live Demo:
+https://askai-django-assistant.onrender.com/
+
+---
+
+## ✅ Task Manager REST API
+
+**Tech Stack**
+
+Django REST Framework • JWT • SQLite
+
+**Features**
+
+- Authentication
+- CRUD Operations
+- REST APIs
+
+GitHub:
+https://github.com/balajiinfo8/task_manager_django
+
+Live Demo:
+https://task-manager-django-iqs0.onrender.com/
+
+---
+
+## 🎬 Movie Recommendation System
+
+**Tech Stack**
+
+React.js • JavaScript • REST API
+
+**Features**
+
+- Search Movies
+- API Integration
+- Responsive UI
+
+GitHub:
+https://github.com/balajiinfo8/React-MovieRecommendationApp
+
+Live Demo:
+https://balajiinfo8.github.io/React-MovieRecommendationApp/
+
+---
+
+# 📊 GitHub Stats
+
+<p align="center">
+
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=balajiinfo8&show_icons=true&theme=dracula"/>
+
+<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=balajiinfo8&theme=dracula"/>
+
+</p>
+
+<p align="center">
+
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=balajiinfo8&layout=compact&theme=dracula"/>
+
+</p>
+
+---
+
+# 🏆 GitHub Trophies
+
+<p align="center">
+
+<img src="https://github-profile-trophy.vercel.app/?username=balajiinfo8&theme=dracula&margin-w=10"/>
+
+</p>
+
+---
+
+# 📚 Currently Learning
+
+- React.js
+- Advanced React
+- Docker
+- Redis
+- Celery
+- AWS Basics
+
+---
+
+# 📫 Reach Me
+
+📧 **Email**
+
+balajivinothkumar.dev@gmail.com
+
+🌐 **Portfolio**
+
+https://balajiinfo8.github.io/portfolio/
+
+💼 **LinkedIn**
+
+https://www.linkedin.com/in/balaji-vinothkumar
+
+💻 **GitHub**
+
+https://github.com/balajiinfo8
 
 ---
 
 <p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=balajiinfo8&icon=0&color=0" />
+
+<img src="https://visitcount.itsvg.in/api?id=balajiinfo8&icon=5&color=6"/>
+
 </p>
+
+⭐ Thanks for visiting my GitHub profile!
